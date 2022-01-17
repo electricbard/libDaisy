@@ -53,10 +53,11 @@ void Foremation::SetHidUpdateRates()
     {
         controls[i].SetSampleRate(AudioCallbackRate());
     }
+    /*
     for(size_t i = 0; i < SW_LAST; i++)
     {
         switches[i].SetSampleRate(AudioCallbackRate());
-    }
+    }*/
 }
 
 void Foremation::StartAudio(AudioHandle::AudioCallback cb)
@@ -244,7 +245,6 @@ void Foremation::InitControls()
     cfg[CTRL_BARREL].InitSingle(seed.GetPin(PIN_CTRL_BARREL));
     cfg[CTRL_FINE].InitSingle(seed.GetPin(PIN_CTRL_FINE));
     cfg[CTRL_FM].InitSingle(seed.GetPin(PIN_CTRL_FM));
-    cfg[CTRL_LAST].InitSingle(seed.GetPin(PIN_CTRL_LAST));
 
     // Initialize ADC
     seed.adc.Init(cfg, CTRL_LAST);
@@ -278,7 +278,7 @@ void Foremation::InitSwitches()
 
     for(size_t i = 0; i < SW_LAST; i++)
     {
-        switches[i].Init(seed.GetPin(pin_numbers[i]), AudioCallbackRate(), TYPE_TOGGLE, POLARITY_INVERTED, PULL_UP);
+        switches[i].Init(seed.GetPin(pin_numbers[i]), AudioCallbackRate(), Switch::TYPE_TOGGLE, Switch::POLARITY_INVERTED, Switch::PULL_UP);
     }
 }
 

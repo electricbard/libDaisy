@@ -28,7 +28,7 @@ daisy_petal \
 daisy_field \
 daisy_versio \
 daisy_patch_sm \
-foremation \
+daisy_foremation \
 sys/fatfs \
 sys/system \
 dev/sr_595 \

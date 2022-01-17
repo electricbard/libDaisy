@@ -52,13 +52,13 @@ class Foremation
         LED_4,
         LED_5,
         LED_LAST,
-    }
+    };
 
 
     /** Constructor */
-    foremation() {}
+    Foremation() {}
     /** Destructor */
-    ~foremation() {}
+    ~Foremation() {}
 
     /** Initializes the daisy seed, and patch hardware.*/
     void Init(bool boost = false);
