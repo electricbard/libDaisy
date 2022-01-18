@@ -239,7 +239,7 @@ void Foremation::InitControls()
     // Init ADC channels with Pins
     cfg[CTRL_PITCH_1].InitSingle(seed.GetPin(PIN_CTRL_PITCH_1));
     cfg[CTRL_FORMANT].InitSingle(seed.GetPin(PIN_CTRL_FORMANT));
-    cfg[CTRL_DETUNE].InitSingle(seed.GetPin(CTRL_DETUNE));
+    cfg[CTRL_DETUNE].InitSingle(seed.GetPin(PIN_CTRL_DETUNE));
     cfg[CTRL_AIRE].InitSingle(seed.GetPin(PIN_CTRL_AIRE));
     cfg[CTRL_PITCH_2].InitSingle(seed.GetPin(PIN_CTRL_PITCH_2));
     cfg[CTRL_BARREL].InitSingle(seed.GetPin(PIN_CTRL_BARREL));
