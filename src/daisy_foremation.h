@@ -143,7 +143,7 @@ class Foremation
     DaisySeed       seed;                             /**< Seed object */
     AnalogControl   controls[CTRL_LAST];              /**< Array of controls*/
     Switch          switches[SW_LAST];
-    //Led             pitch_led[LED_LAST];
+    dsy_gpio        leds[LED_LAST];
 
 
   private:
