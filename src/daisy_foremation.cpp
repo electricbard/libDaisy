@@ -238,12 +238,16 @@ void Foremation::InitSwitches()
     //    buttons[BUTTON_1] = &button1;
     //    buttons[BUTTON_2] = &button2;
 
-    switches[PIN_SW_OCT_UP].Init(seed.GetPin(pin_numbers[PIN_SW_OCT_UP]), AudioCallbackRate(), Switch::TYPE_MOMENTARY, Switch::POLARITY_INVERTED, Switch::PULL_UP);
-    switches[PIN_SW_OCT_DOWN].Init(seed.GetPin(pin_numbers[PIN_SW_OCT_DOWN]), AudioCallbackRate(), Switch::TYPE_MOMENTARY, Switch::POLARITY_INVERTED, Switch::PULL_UP);
+    //switches[PIN_SW_OCT_UP].Init(seed.GetPin(pin_numbers[PIN_SW_OCT_UP]), AudioCallbackRate(), Switch::TYPE_MOMENTARY, Switch::POLARITY_INVERTED, Switch::PULL_UP);
+    //switches[PIN_SW_OCT_DOWN].Init(seed.GetPin(pin_numbers[PIN_SW_OCT_DOWN]), AudioCallbackRate(), Switch::TYPE_MOMENTARY, Switch::POLARITY_INVERTED, Switch::PULL_UP);
 
-    for(size_t i = PIN_SW_WAVE_1_A; i < SW_LAST; i++)
+    // for(size_t i = PIN_SW_WAVE_1_A; i < SW_LAST; i++)
+    // {
+    //     switches[i].Init(seed.GetPin(pin_numbers[i]), AudioCallbackRate(), Switch::TYPE_TOGGLE, Switch::POLARITY_INVERTED, Switch::PULL_UP);
+    // }
+    for(size_t i = 0; i < SW_LAST; i++)
     {
-        switches[i].Init(seed.GetPin(pin_numbers[i]), AudioCallbackRate(), Switch::TYPE_TOGGLE, Switch::POLARITY_INVERTED, Switch::PULL_UP);
+        switches[i].Init(seed.GetPin(pin_numbers[i]));
     }
 }
 
