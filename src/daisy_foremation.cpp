@@ -12,6 +12,7 @@ using namespace daisy;
 #define PIN_CTRL_DETUNE     17
 #define PIN_CTRL_AIRE       18
 #define PIN_CTRL_PITCH_2    19
+#define PIN_SIG_FM          20
 #define PIN_CTRL_BARREL     21
 #define PIN_CTRL_FINE       24
 #define PIN_CTRL_FM         25
@@ -217,6 +218,7 @@ void Foremation::InitControls()
     cfg[CTRL_BARREL].InitSingle(seed.GetPin(PIN_CTRL_BARREL));
     cfg[CTRL_FINE].InitSingle(seed.GetPin(PIN_CTRL_FINE));
     cfg[CTRL_FM].InitSingle(seed.GetPin(PIN_CTRL_FM));
+    cfg[SIG_FM].InitSingle(seed.GetPin(PIN_SIG_FM));
 
     // Initialize ADC
     seed.adc.Init(cfg, CTRL_LAST);

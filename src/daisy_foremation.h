@@ -40,6 +40,7 @@ class Foremation
         CTRL_BARREL,
         CTRL_FINE,
         CTRL_FM,
+        SIG_FM,
         CTRL_LAST,
     };
 
